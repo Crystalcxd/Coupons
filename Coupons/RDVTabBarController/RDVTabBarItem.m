@@ -184,7 +184,7 @@
     
     // Draw badges
     
-    if ([[self badgeValue] length]) {
+    if ([[self badgeValue] integerValue] != 0) {
         CGSize badgeSize = CGSizeZero;
         
         if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
@@ -295,5 +295,17 @@
         [self setUnselectedBackgroundImage:unselectedImage];
     }
 }
+
+#pragma mark - Accessibility
+
+- (NSString *)accessibilityLabel{
+    return @"tabbarItem";
+}
+
+- (BOOL)isAccessibilityElement
+{
+    return YES;
+}
+
 
 @end
