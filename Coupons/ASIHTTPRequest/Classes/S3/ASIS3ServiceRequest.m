@@ -62,13 +62,13 @@
 	} else if ([elementName isEqualToString:@"Name"]) {
 		[[self currentBucket] setName:[self currentXMLElementContent]];
 	} else if ([elementName isEqualToString:@"CreationDate"]) {
-		[[self currentBucket] setCreationDate:[[ASISRequest S3ResponseDateFormatter] dateFromString:[self currentXMLElementContent]]];
+		[[self currentBucket] setCreationDate:[[ASIS3Request S3ResponseDateFormatter] dateFromString:[self currentXMLElementContent]]];
 	} else if ([elementName isEqualToString:@"ID"]) {
 		[self setOwnerID:[self currentXMLElementContent]];
 	} else if ([elementName isEqualToString:@"DisplayName"]) {
 		[self setOwnerName:[self currentXMLElementContent]];
 	} else {
-		// Let ASISRequest look for error messages
+		// Let ASIS3Request look for error messages
 		[super parser:parser didEndElement:elementName namespaceURI:namespaceURI qualifiedName:qName];
 	}
 }

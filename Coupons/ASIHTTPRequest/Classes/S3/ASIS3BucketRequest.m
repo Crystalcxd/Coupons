@@ -128,7 +128,7 @@
 	} else if ([elementName isEqualToString:@"Key"]) {
 		[[self currentObject] setKey:[self currentXMLElementContent]];
 	} else if ([elementName isEqualToString:@"LastModified"]) {
-		[[self currentObject] setLastModified:[[ASISRequest S3ResponseDateFormatter] dateFromString:[self currentXMLElementContent]]];
+		[[self currentObject] setLastModified:[[ASIS3Request S3ResponseDateFormatter] dateFromString:[self currentXMLElementContent]]];
 	} else if ([elementName isEqualToString:@"ETag"]) {
 		[[self currentObject] setETag:[self currentXMLElementContent]];
 	} else if ([elementName isEqualToString:@"Size"]) {
@@ -142,7 +142,7 @@
 	} else if ([elementName isEqualToString:@"IsTruncated"]) {
 		[self setIsTruncated:[[self currentXMLElementContent] isEqualToString:@"true"]];
 	} else {
-		// Let ASISRequest look for error messages
+		// Let ASIS3Request look for error messages
 		[super parser:parser didEndElement:elementName namespaceURI:namespaceURI qualifiedName:qName];
 	}
 }

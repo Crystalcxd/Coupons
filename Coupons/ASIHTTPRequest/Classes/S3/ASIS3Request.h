@@ -1,5 +1,5 @@
 //
-//  ASISRequest.h
+//  ASIS3Request.h
 //  Part of ASIHTTPRequest -> http://allseeing-i.com/ASIHTTPRequest
 //
 //  Created by Ben Copsey on 30/06/2009.
@@ -23,9 +23,9 @@ extern NSString *const ASIS3AccessPolicyAuthenticatedRead;
 extern NSString *const ASIS3AccessPolicyBucketOwnerRead;
 extern NSString *const ASIS3AccessPolicyBucketOwnerFullControl;
 
-// Constants for requestScheme - defaults is ASISRequestSchemeHTTP
-extern NSString *const ASISRequestSchemeHTTP;
-extern NSString *const ASISRequestSchemeHTTPS;
+// Constants for requestScheme - defaults is ASIS3RequestSchemeHTTP
+extern NSString *const ASIS3RequestSchemeHTTP;
+extern NSString *const ASIS3RequestSchemeHTTPS;
 
 
 
@@ -36,21 +36,21 @@ typedef enum _ASIS3ErrorType {
 
 
 
-@interface ASISRequest : ASIHTTPRequest <NSCopying, NSXMLParserDelegate> {
+@interface ASIS3Request : ASIHTTPRequest <NSCopying, NSXMLParserDelegate> {
 	
-	// Your S3 access key. Set it on the request, or set it globally using [ASISRequest setSharedAccessKey:]
+	// Your S3 access key. Set it on the request, or set it globally using [ASIS3Request setSharedAccessKey:]
 	NSString *accessKey;
 	
-	// Your S3 secret access key. Set it on the request, or set it globally using [ASISRequest setSharedSecretAccessKey:]
+	// Your S3 secret access key. Set it on the request, or set it globally using [ASIS3Request setSharedSecretAccessKey:]
 	NSString *secretAccessKey;
 	
-	// Set to ASISRequestSchemeHTTPS to send your requests via HTTPS (default is ASISRequestSchemeHTTP)
+	// Set to ASIS3RequestSchemeHTTPS to send your requests via HTTPS (default is ASIS3RequestSchemeHTTP)
 	NSString *requestScheme;
 
 	// The string that will be used in the HTTP date header. Generally you'll want to ignore this and let the class add the current date for you, but the accessor is used by the tests
 	NSString *dateString;
 
-	// The access policy to use when PUTting a file (see the string constants at the top ASISRequest.h for details on what the possible options are)
+	// The access policy to use when PUTting a file (see the string constants at the top ASIS3Request.h for details on what the possible options are)
 	NSString *accessPolicy;
 
 	// Internally used while parsing errors

@@ -107,9 +107,9 @@ NSString *const ASIS3StorageClassReducedRedundancy = @"REDUCED_REDUNDANCY";
 - (void)buildURL
 {
 	if ([self subResource]) {
-		[self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@.%@%@?%@",[self requestScheme],[self bucket],[[self class] S3Host],[ASISRequest stringByURLEncodingForS3Path:[self key]],[self subResource]]]];
+		[self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@.%@%@?%@",[self requestScheme],[self bucket],[[self class] S3Host],[ASIS3Request stringByURLEncodingForS3Path:[self key]],[self subResource]]]];
 	} else {
-		[self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@.%@%@",[self requestScheme],[self bucket],[[self class] S3Host],[ASISRequest stringByURLEncodingForS3Path:[self key]]]]];
+		[self setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@.%@%@",[self requestScheme],[self bucket],[[self class] S3Host],[ASIS3Request stringByURLEncodingForS3Path:[self key]]]]];
 	}
 }
 
@@ -127,16 +127,16 @@ NSString *const ASIS3StorageClassReducedRedundancy = @"REDUCED_REDUNDANCY";
 - (NSString *)canonicalizedResource
 {
 	if ([[self subResource] length] > 0) {
-		return [NSString stringWithFormat:@"/%@%@?%@",[self bucket],[ASISRequest stringByURLEncodingForS3Path:[self key]], [self subResource]];
+		return [NSString stringWithFormat:@"/%@%@?%@",[self bucket],[ASIS3Request stringByURLEncodingForS3Path:[self key]], [self subResource]];
 	}
-	return [NSString stringWithFormat:@"/%@%@",[self bucket],[ASISRequest stringByURLEncodingForS3Path:[self key]]];
+	return [NSString stringWithFormat:@"/%@%@",[self bucket],[ASIS3Request stringByURLEncodingForS3Path:[self key]]];
 }
 
 - (NSMutableDictionary *)S3Headers
 {
 	NSMutableDictionary *headers = [super S3Headers];
 	if ([self sourceKey]) {
-		NSString *path = [ASISRequest stringByURLEncodingForS3Path:[self sourceKey]];
+		NSString *path = [ASIS3Request stringByURLEncodingForS3Path:[self sourceKey]];
 		[headers setObject:[[self sourceBucket] stringByAppendingString:path] forKey:@"x-amz-copy-source"];
 	}
 	if ([self storageClass]) {

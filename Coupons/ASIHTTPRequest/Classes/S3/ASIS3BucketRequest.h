@@ -8,11 +8,11 @@
 //  Use this class to create buckets, fetch a list of their contents, and delete buckets
 
 #import <Foundation/Foundation.h>
-#import "ASISRequest.h"
+#import "ASIS3Request.h"
 
 @class ASIS3BucketObject;
 
-@interface ASIS3BucketRequest : ASISRequest {
+@interface ASIS3BucketRequest : ASIS3Request {
 	
 	// Name of the bucket to talk to
 	NSString *bucket;

@@ -8,13 +8,13 @@
 //  Use an ASIS3ObjectRequest to fetch, upload, copy and delete objects on Amazon S3
 
 #import <Foundation/Foundation.h>
-#import "ASISRequest.h"
+#import "ASIS3Request.h"
 
 // Constants for storage class
 extern NSString *const ASIS3StorageClassStandard;
 extern NSString *const ASIS3StorageClassReducedRedundancy;
 
-@interface ASIS3ObjectRequest : ASISRequest {
+@interface ASIS3ObjectRequest : ASIS3Request {
 
 	// Name of the bucket to talk to
 	NSString *bucket;

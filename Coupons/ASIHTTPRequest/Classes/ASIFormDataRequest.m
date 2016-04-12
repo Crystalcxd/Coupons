@@ -15,8 +15,8 @@
 - (void)buildURLEncodedPostBody;
 - (void)appendPostString:(NSString *)string;
 
-@property (retain) NSMutableArray *postData;
-@property (retain) NSMutableArray *fileData;
+@property (atomic, retain) NSMutableArray *postData;
+@property (atomic, retain) NSMutableArray *fileData;
 
 #if DEBUG_FORM_DATA_REQUEST
 - (void)addToDebugBody:(NSString *)string;
@@ -49,6 +49,7 @@
 	self = [super initWithURL:newURL];
 	[self setPostFormat:ASIURLEncodedPostFormat];
 	[self setStringEncoding:NSUTF8StringEncoding];
+        [self setRequestMethod:@"POST"];
 	return self;
 }
 
@@ -207,10 +208,11 @@
 	[super buildPostBody];
 	
 #if DEBUG_FORM_DATA_REQUEST
-	NSLog(@"%@",[self debugBodyString]);
+	ASI_DEBUG_LOG(@"%@",[self debugBodyString]);
 	[self setDebugBodyString:nil];
 #endif
 }
+
 
 - (void)buildMultipartFormDataPostBody
 {

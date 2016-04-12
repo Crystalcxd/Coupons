@@ -81,14 +81,14 @@
 	zStream.avail_in = (unsigned int)length;
 	zStream.avail_out = 0;
 
-	NSInteger bytesProcessedAlready = zStream.total_out;
+	NSUInteger bytesProcessedAlready = zStream.total_out;
 	while (zStream.avail_out == 0) {
 		
 		if (zStream.total_out-bytesProcessedAlready >= [outputData length]) {
 			[outputData increaseLengthBy:halfLength];
 		}
 		
-		zStream.next_out = [outputData mutableBytes] + zStream.total_out-bytesProcessedAlready;
+		zStream.next_out = (Bytef*)[outputData mutableBytes] + zStream.total_out-bytesProcessedAlready;
 		zStream.avail_out = (unsigned int)([outputData length] - (zStream.total_out-bytesProcessedAlready));
 		status = deflate(&zStream, shouldFinish ? Z_FINISH : Z_NO_FLUSH);
 		
@@ -174,7 +174,7 @@
 		}
 		
 		// Attempt to deflate the chunk of data
-		outputData = [compressor compressBytes:inputData length:readLength error:&theError shouldFinish:readLength < DATA_CHUNK_SIZE ];
+		outputData = [compressor compressBytes:inputData length:(NSUInteger)readLength error:&theError shouldFinish:readLength < DATA_CHUNK_SIZE];
 		if (theError) {
 			if (err) {
 				*err = theError;
@@ -184,7 +184,7 @@
 		}
 		
 		// Write the deflated data out to the destination file
-		[outputStream write:[outputData bytes] maxLength:[outputData length]];
+		[outputStream write:(const uint8_t *)[outputData bytes] maxLength:[outputData length]];
 		
 		// Make sure nothing went wrong
 		if ([inputStream streamStatus] == NSStreamStatusError) {
@@ -212,7 +212,7 @@
 
 + (NSError *)deflateErrorWithCode:(int)code
 {
-	return [NSError errorWithDomain:NetworkRequestErrorDomain code:ASICompressionError userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Compression of data failed with code %i",code],NSLocalizedDescriptionKey,nil]];
+	return [NSError errorWithDomain:NetworkRequestErrorDomain code:ASICompressionError userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Compression of data failed with code %d",code],NSLocalizedDescriptionKey,nil]];
 }
 
 @synthesize streamReady;

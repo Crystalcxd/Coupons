@@ -8,11 +8,11 @@
 //  Create an ASIS3ServiceRequest to obtain a list of your buckets
 
 #import <Foundation/Foundation.h>
-#import "ASISRequest.h"
+#import "ASIS3Request.h"
 
 @class ASIS3Bucket;
 
-@interface ASIS3ServiceRequest : ASISRequest {
+@interface ASIS3ServiceRequest : ASIS3Request {
 	
 	// Internally used while parsing the response
 	ASIS3Bucket *currentBucket;
