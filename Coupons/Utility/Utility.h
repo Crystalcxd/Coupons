@@ -26,7 +26,7 @@
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
-#define SCREENWIDTHSCALE [UIScreen mainScreen].bounds.size.width/320.0
+#define SCREENWIDTHSCALE [UIScreen mainScreen].bounds.size.width/375.0
 
 #define TABLEVIEW_BEGIN_TAG 1000
 
