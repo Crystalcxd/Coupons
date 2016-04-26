@@ -13,15 +13,21 @@
 
 #import "ToolBarPicker.h"
 
-#import "BaiduMobAdView.h"
+
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
+#import <CommonCrypto/CommonDigest.h>
+
+#import <AdSupport/ASIdentifierManager.h>
 
 #import "Coupons.h"
 #import "WMUserDefault.h"
 
-@interface HomeViewController ()<BaiduMobAdViewDelegate,UIActionSheetDelegate>
+@interface HomeViewController ()<UIActionSheetDelegate>
 
 @property (nonatomic , strong) UIScrollView *scrollview;
-@property (nonatomic , strong) BaiduMobAdView *dmAdView;
+
+@property (nonatomic , strong) GADBannerView *bannerView;
 
 @property (nonatomic , strong) ToolBarPicker *chooseView;
 
@@ -44,30 +50,17 @@
     topline.backgroundColor = [UIColor colorWithRed:180/255.0 green:180/255.0 blue:180/255.0 alpha:0];
     [self.view addSubview:topline];
     
+    self.bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0, 20)];
+    self.bannerView.adUnitID = @"ca-app-pub-8367513217871338/1352339007";
+    self.bannerView.rootViewController = self;
     
-    self.dmAdView = [[BaiduMobAdView alloc] init];
-    self.dmAdView.AdType = BaiduMobAdViewTypeBanner;
-    self.dmAdView.frame = CGRectMake(0, 20, SCREENWIDTH, SCREENWIDTH / 320.0 * kBaiduAdViewSizeDefaultHeight);
-    self.dmAdView.delegate = self;
-    [self.view addSubview:self.dmAdView];
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[@"61ae5bb35a2bbc7e1e6030b18b2791e2"];
     
-//    self.adView = [[AdMoGoView alloc] initWithAppKey:@"9155ba1a86334581a910b527d42ddd43" adType:AdViewTypeNormalBanner adMoGoViewDelegate:self autoScale:YES];
-////    self.adView.backgroundColor = [UIColor grayColor];
-//    // typedef enum {
-//    // AdViewTypeUnknown = 0， //error
-//    // AdViewTypeNormalBanner = 1， //e.g. 320 * 50 ; 320 * 48 iphone banner
-//    // AdViewTypeLargeBanner = 2， //e.g. 728 * 90 ; 768 * 110 ipad only
-//    // AdViewTypeMediumBanner = 3， //e.g. 468 * 60 ; 508 * 80 ipad only
-//    // AdViewTypeRectangle = 4， //e.g. 300 * 250; 320 * 270 ipad only
-//    // AdViewTypeSky = 5， //Don't support
-//    // AdViewTypeFullScreen = 6， //iphone full screen ad
-//    // AdViewTypeVideo = 7， //Don't support
-//    // AdViewTypeiPadNormalBanner = 8， //ipad use iphone banner 
-//    // } AdViewType; 
-//    self.adView.frame = CGRectMake(0, CGRectGetMaxY(topline.frame), 320, 48);
-//    [self.view addSubview:self.adView];
+    [self.bannerView loadRequest:request];
+    [self.view addSubview:self.bannerView];
     
-    self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SCREENWIDTH / 320.0 * kBaiduAdViewSizeDefaultHeight + 20, SCREENWIDTH, SCREENHEIGHT - kBottomViewHeight - SCREENWIDTH / 320.0 * kBaiduAdViewSizeDefaultHeight - 20)];
+    self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SCREENWIDTH / 320.0 * kGADAdSizeBanner.size.height + 20, SCREENWIDTH, SCREENHEIGHT - kBottomViewHeight - SCREENWIDTH / 320.0 * kGADAdSizeBanner.size.height - 20)];
     [self.scrollview setContentSize:CGSizeMake(SCREENWIDTH, 30 * 6 + 68 * 5)];
     self.scrollview.backgroundColor = HexRGB(0xff99bf);
     [self.view addSubview:self.scrollview];
@@ -124,7 +117,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.dmAdView start];
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController.rdv_tabBarController setTabBarHidden:NO animated:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"hidenCoupons" object:nil];
@@ -134,7 +126,29 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [self.dmAdView close];
+
+}
+
+-(NSString*) uuid {
+    CFUUIDRef puuid = CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
+    NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+    CFRelease(puuid);
+    CFRelease(uuidString);
+    return result;
+}
+
+- (NSString *)md5HexDigest:(NSString*)input
+{
+    const char* str = [input UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(str, strlen(str), result);
+    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH*2];//
+    
+    for(int i = 0; i<CC_MD5_DIGEST_LENGTH; i++) {
+        [ret appendFormat:@"%02x",result[i]];
+    }
+    return ret;
 }
 
 - (void)updateItemViewColorWith:(NSInteger)tag

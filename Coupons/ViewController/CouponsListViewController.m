@@ -10,7 +10,8 @@
 
 #import "CouponsCell.h"
 
-#import "BaiduMobAdView.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import <AdSupport/ASIdentifierManager.h>
 
 #import "WMUserDefault.h"
 
@@ -18,11 +19,11 @@
 
 #import "AppDelegate.h"
 
-@interface CouponsListViewController ()<UITableViewDataSource,UITableViewDelegate,CouponsCellDelegate,BaiduMobAdViewDelegate>
+@interface CouponsListViewController ()<UITableViewDataSource,UITableViewDelegate,CouponsCellDelegate>
+
+@property (nonatomic , strong) GADBannerView *bannerView;
 
 @property (nonatomic , strong) NSMutableArray *array;
-
-@property (nonatomic , strong) BaiduMobAdView *adView;
 
 @end
 
@@ -49,10 +50,15 @@
     topline.backgroundColor = [UIColor colorWithRed:180/255.0 green:180/255.0 blue:180/255.0 alpha:0];
     [self.view addSubview:topline];
 
-    self.adView = [[BaiduMobAdView alloc] init];
-    self.adView.AdType = BaiduMobAdViewTypeBanner;
-    self.adView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENWIDTH / 320.0 * kBaiduAdViewSizeDefaultHeight);
-    self.adView.delegate = self;
+    self.bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0, 20)];
+    self.bannerView.adUnitID = @"ca-app-pub-8367513217871338/5782538605";
+    self.bannerView.rootViewController = self;
+    
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[@"61ae5bb35a2bbc7e1e6030b18b2791e2"];
+    
+    [self.bannerView loadRequest:request];
+    [self.view addSubview:self.bannerView];
 
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topline.frame), SCREENWIDTH, SCREENHEIGHT - topdiatance - kBottomViewHeight)];
     table.delegate = self;
@@ -61,7 +67,7 @@
     
     [table reloadData];
     
-    table.tableHeaderView = self.adView;
+    table.tableHeaderView = self.bannerView;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -69,14 +75,11 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController.rdv_tabBarController setTabBarHidden:NO animated:NO];
-    
-    [self.adView start];
 }
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.adView close];
 }
 #pragma mark CouponsCellDelegate
 - (void)shareWith:(UIImage *)image

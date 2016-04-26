@@ -13,6 +13,12 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 
+#import <CommonCrypto/CommonDigest.h>
+
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
+#import <AdSupport/ASIdentifierManager.h>
+
 @interface AppDelegate ()
 
 @property (nonatomic , assign) BOOL showCouponsView;
@@ -25,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.showCouponsView = NO;
-    
+         
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showCoupons) name:@"showCoupons" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidenCoupons) name:@"hidenCoupons" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showCover) name:@"showCover" object:nil];
@@ -44,6 +50,27 @@
     return YES;
 }
 
+-(NSString*) uuid {
+    CFUUIDRef puuid = CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
+    NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+    CFRelease(puuid);
+    CFRelease(uuidString);
+    return result;
+}
+
+- (NSString *)md5HexDigest:(NSString*)input
+{
+    const char* str = [input UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(str, strlen(str), result);
+    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH*2];//
+    
+    for(int i = 0; i<CC_MD5_DIGEST_LENGTH; i++) {
+        [ret appendFormat:@"%02x",result[i]];
+    }
+    return ret;
+}
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     if([[url absoluteString] rangeOfString:WXAppId].location != NSNotFound){
         return [WXApi handleOpenURL:url delegate:self];

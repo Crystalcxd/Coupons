@@ -49,7 +49,7 @@
     [self.view addSubview:leftButton];
 
     
-    self.tableheadView = [[MptTableHeadView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENWIDTH / 375 * 200) Type:MptTableHeadViewOther];
+    self.tableheadView = [[MptTableHeadView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, SCREENWIDTH, SCREENWIDTH / 375 * 200) Type:MptTableHeadViewOther];
     self.tableheadView.dataSource = self;
     self.tableheadView.delegate = self;
     
@@ -61,14 +61,12 @@
     firstLine.backgroundColor = HexRGB(0xFC6865);
     [self.view addSubview:firstLine];
     
-    UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, SCREENWIDTH, SCREENHEIGHT - kStatusBarHeight)];
+    UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.tableheadView.frame) + SCREENWIDTH / 375.0 * 30, SCREENWIDTH, SCREENHEIGHT - CGRectGetMaxY(self.tableheadView.frame) - SCREENWIDTH / 375.0 * 30)];
     table.delegate = self;
     table.dataSource = self;
     table.tableFooterView = [[UIView alloc] init];
     table.tag = TABLEVIEW_BEGIN_TAG;
     [self.view addSubview:table];
-    
-    table.tableHeaderView = self.tableheadView;
     
     UIButton *upBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     upBtn.frame = CGRectMake(SCREENWIDTH - 38, SCREENHEIGHT - 88, 38, 44);
@@ -437,7 +435,7 @@
 
     NSNumber *number = [dic objectForKey:@"height"];
     
-    return number.integerValue * 0.5 * SCREENWIDTHSCALE;
+    return number.integerValue * 0.5;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
