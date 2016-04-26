@@ -54,11 +54,14 @@
     self.bannerView.adUnitID = @"ca-app-pub-8367513217871338/5782538605";
     self.bannerView.rootViewController = self;
     
+    CGRect frame = self.bannerView.frame;
+    frame.size.height = kGADAdSizeBanner.size.height * SCREENWIDTH /320.0;
+    self.bannerView.frame = frame;
+
     GADRequest *request = [GADRequest request];
     request.testDevices = @[@"61ae5bb35a2bbc7e1e6030b18b2791e2"];
     
     [self.bannerView loadRequest:request];
-    [self.view addSubview:self.bannerView];
 
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topline.frame), SCREENWIDTH, SCREENHEIGHT - topdiatance - kBottomViewHeight)];
     table.delegate = self;

@@ -51,6 +51,11 @@
     [self.view addSubview:topline];
     
     self.bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0, 20)];
+    
+    CGRect frame = self.bannerView.frame;
+    frame.size.height = kGADAdSizeBanner.size.height * SCREENWIDTH /320.0;
+    self.bannerView.frame = frame;
+    
     self.bannerView.adUnitID = @"ca-app-pub-8367513217871338/1352339007";
     self.bannerView.rootViewController = self;
     
