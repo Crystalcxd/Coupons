@@ -60,7 +60,8 @@
 
     GADRequest *request = [GADRequest request];
     request.testDevices = @[@"61ae5bb35a2bbc7e1e6030b18b2791e2"];
-    
+//    request.testDevices = @[kGADSimulatorID];
+
     [self.bannerView loadRequest:request];
 
     UITableView *table = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topline.frame), SCREENWIDTH, SCREENHEIGHT - topdiatance - kBottomViewHeight)];

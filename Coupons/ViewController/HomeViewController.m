@@ -53,6 +53,7 @@
     self.bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0, 20)];
     
     CGRect frame = self.bannerView.frame;
+    frame.size.width = kGADAdSizeBanner.size.width * SCREENWIDTH / 320.0;
     frame.size.height = kGADAdSizeBanner.size.height * SCREENWIDTH /320.0;
     self.bannerView.frame = frame;
     
@@ -61,6 +62,7 @@
     
     GADRequest *request = [GADRequest request];
     request.testDevices = @[@"61ae5bb35a2bbc7e1e6030b18b2791e2"];
+//    request.testDevices = @[kGADSimulatorID];
     
     [self.bannerView loadRequest:request];
     [self.view addSubview:self.bannerView];

@@ -66,6 +66,8 @@
     table.dataSource = self;
     table.tableFooterView = [[UIView alloc] init];
     table.tag = TABLEVIEW_BEGIN_TAG;
+    table.backgroundColor = HexRGB(0xffdde9);
+    table.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:table];
     
     table.tableHeaderView = self.tableheadView;
@@ -76,7 +78,6 @@
     [upBtn addTarget:self action:@selector(scrollUpAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:upBtn];
-    
 }
 
 - (void)loadLocalCache
@@ -308,30 +309,33 @@
 }
 
 - (void)tableHeadView:(MptTableHeadView *)headView didSelectIndex:(NSUInteger)index {
-    if (self.array.count == 0) {
-        return;
-    }
+    [self goWebView];
+    return;
     
-    id objc = nil;
-    if (self.array.count > index) {
-        objc = [self.array objectAtIndex:index];
-    } else {
-        return;
-    }
-    
-    if ([objc isKindOfClass:[NSString class]]) {
-        return;
-    }
-    else if ([objc isKindOfClass:[AVObject class]]) {
-        AVObject *object = (AVObject *)objc;
-        
-        NSString *str = [Utility safeStringWith:[object objectForKey:@"jumpUrl"]];
-        if ([str isEqualToString:@""] || [str isEqualToString:@" "]) {
-            return;
-        }
-        
-        [self goWebViewWith:str];
-    }
+//    if (self.array.count == 0) {
+//        return;
+//    }
+//    
+//    id objc = nil;
+//    if (self.array.count > index) {
+//        objc = [self.array objectAtIndex:index];
+//    } else {
+//        return;
+//    }
+//    
+//    if ([objc isKindOfClass:[NSString class]]) {
+//        return;
+//    }
+//    else if ([objc isKindOfClass:[AVObject class]]) {
+//        AVObject *object = (AVObject *)objc;
+//        
+//        NSString *str = [Utility safeStringWith:[object objectForKey:@"jumpUrl"]];
+//        if ([str isEqualToString:@""] || [str isEqualToString:@" "]) {
+//            return;
+//        }
+//        
+//        [self goWebViewWith:str];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -362,6 +366,7 @@
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:articlIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
         }
         
         cell.backgroundColor = HexRGB(0xffdde9);

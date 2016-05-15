@@ -81,7 +81,7 @@
 	NSString *query = @"?format=xml";
 	
 	if (limit > 0) {
-		query = [query stringByAppendingString:[NSString stringWithFormat:@"&limit=%i", limit]];
+		query = [query stringByAppendingString:[NSString stringWithFormat:@"&limit=%lu", (unsigned long)limit]];
 	}
 	
 	if (marker) {
@@ -89,7 +89,7 @@
 	}
 	
 	if (limit > 0) {
-		query = [query stringByAppendingString:[NSString stringWithFormat:@"&limit=%i", limit]];
+		query = [query stringByAppendingString:[NSString stringWithFormat:@"&limit=%lu", (unsigned long)limit]];
 	}
 	
 	ASICloudFilesCDNRequest *request = [ASICloudFilesCDNRequest cdnRequestWithMethod:@"GET" query:query];
