@@ -18,12 +18,14 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - WeChat_SDK (1.7.2.1)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
   - AVOSCloud (~> 3.8.1)
   - MBProgressHUD (~> 0.8)
   - SDWebImage
+  - WeChat_SDK (~> 1.7.2.1)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
@@ -31,7 +33,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  WeChat_SDK: ecf5879b5cabcc953c9acc2d759ade18adbff39a
 
-PODFILE CHECKSUM: a438fd884ab16dd6310fb698753cea03d546c1d3
+PODFILE CHECKSUM: 56336072392ab11203963f7001ed0e8ef564304b
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.1

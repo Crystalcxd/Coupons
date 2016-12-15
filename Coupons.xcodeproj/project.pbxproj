@@ -18,7 +18,6 @@
 		4C5BDBCA1CA192D0003C14D8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BDBC91CA192D0003C14D8 /* Social.framework */; };
 		4C5F5BE91B748ABC00B7E800 /* WMUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5F5BE81B748ABC00B7E800 /* WMUserDefault.m */; };
 		4C5F5BED1B749BB800B7E800 /* Coupons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5F5BEC1B749BB800B7E800 /* Coupons.m */; };
-		4C6B78151B3C1C68005DC0F5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6B78141B3C1C68005DC0F5 /* libWeChatSDK.a */; };
 		4C6BF9BF1B439D7700902F39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6BF9BE1B439D7700902F39 /* QuartzCore.framework */; };
 		4C6BF9C11B439D8300902F39 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6BF9C01B439D8300902F39 /* Security.framework */; };
 		4C6BF9C31B439D8F00902F39 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6BF9C21B439D8F00902F39 /* AdSupport.framework */; };
@@ -106,7 +105,6 @@
 		4C5F5BE81B748ABC00B7E800 /* WMUserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMUserDefault.m; sourceTree = "<group>"; };
 		4C5F5BEB1B749BB800B7E800 /* Coupons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coupons.h; sourceTree = "<group>"; };
 		4C5F5BEC1B749BB800B7E800 /* Coupons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coupons.m; sourceTree = "<group>"; };
-		4C6B78141B3C1C68005DC0F5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		4C6BF9BE1B439D7700902F39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C6BF9C01B439D8300902F39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4C6BF9C21B439D8F00902F39 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -159,8 +157,6 @@
 		4CD07ECD1B21BB5E000D1DB9 /* CouponsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponsListViewController.m; sourceTree = "<group>"; };
 		4CD07ECF1B21BEE8000D1DB9 /* CouponsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponsCell.h; sourceTree = "<group>"; };
 		4CD07ED01B21BEE8000D1DB9 /* CouponsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponsCell.m; sourceTree = "<group>"; };
-		4CD3F75F1B35398300029B6A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		4CD3F7601B35398300029B6A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		4CE87ECB1B18499C0011D6B5 /* Coupons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coupons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE87ECF1B18499C0011D6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE87ED01B18499C0011D6B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -241,7 +237,6 @@
 				4C6BF9C31B439D8F00902F39 /* AdSupport.framework in Frameworks */,
 				4C6BF9C11B439D8300902F39 /* Security.framework in Frameworks */,
 				4C6BF9BF1B439D7700902F39 /* QuartzCore.framework in Frameworks */,
-				4C6B78151B3C1C68005DC0F5 /* libWeChatSDK.a in Frameworks */,
 				4CE87F491B1F1F720011D6B5 /* CoreTelephony.framework in Frameworks */,
 				4CE87F471B1F1F680011D6B5 /* CoreLocation.framework in Frameworks */,
 				05CACA8096A48335B82C836E /* libPods-Coupons.a in Frameworks */,
@@ -295,8 +290,6 @@
 			children = (
 				4C816AA91B4EABA300C75954 /* UIImage+KIAdditions.h */,
 				4C816AAA1B4EABA300C75954 /* UIImage+KIAdditions.m */,
-				4CD3F75F1B35398300029B6A /* WXApi.h */,
-				4CD3F7601B35398300029B6A /* WXApiObject.h */,
 			);
 			path = "open source";
 			sourceTree = "<group>";
@@ -338,7 +331,6 @@
 				4C6BF9C21B439D8F00902F39 /* AdSupport.framework */,
 				4C6BF9C01B439D8300902F39 /* Security.framework */,
 				4C6BF9BE1B439D7700902F39 /* QuartzCore.framework */,
-				4C6B78141B3C1C68005DC0F5 /* libWeChatSDK.a */,
 				4CE87F4E1B1F1F920011D6B5 /* Foundation.framework */,
 				4CE87F4C1B1F1F890011D6B5 /* SystemConfiguration.framework */,
 				4CE87F4A1B1F1F7A0011D6B5 /* MobileCoreServices.framework */,
