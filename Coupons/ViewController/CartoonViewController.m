@@ -394,7 +394,7 @@
         return cell;
     }
     
-    NSDictionary *dic = [self.currentImageDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.row + 1]];
+    NSDictionary *dic = [self.currentImageDic objectForKey:[NSString stringWithFormat:@"%d",indexPath.row + 1]];
 
     if (!dic) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:articlIdentifier];
@@ -438,7 +438,7 @@
         
     }
 
-    NSDictionary *dic = [self.currentImageDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.row + 1]];
+    NSDictionary *dic = [self.currentImageDic objectForKey:[NSString stringWithFormat:@"%d",indexPath.row + 1]];
 
     NSNumber *number = [dic objectForKey:@"height"];
     
