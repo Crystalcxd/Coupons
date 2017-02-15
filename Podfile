@@ -7,5 +7,6 @@ pod 'SDWebImage'
 pod 'ASIHTTPRequest'
 pod 'AVOSCloud'
 pod 'WeChat_SDK'
+pod 'AFNetworking'
 
 end
