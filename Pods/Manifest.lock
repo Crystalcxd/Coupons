@@ -27,7 +27,7 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
-  - AVOSCloud (4.0.1)
+  - AVOSCloud (4.1.0)
   - MBProgressHUD (1.0.0)
   - Reachability (3.2)
   - SDWebImage (4.0.0):
@@ -46,7 +46,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
-  AVOSCloud: 521d3639c2619126ec073f617bb5992472b5b2d3
+  AVOSCloud: c7a0514461c5cd612aa7917ed23379ca667d81c9
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
