@@ -29,6 +29,7 @@ PODS:
     - ASIHTTPRequest/Core
   - AVOSCloud (4.1.0)
   - MBProgressHUD (1.0.0)
+  - RDVTabBarController (1.1.9)
   - Reachability (3.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - ASIHTTPRequest
   - AVOSCloud
   - MBProgressHUD
+  - RDVTabBarController
   - SDWebImage
   - WeChat_SDK
 
@@ -48,10 +50,11 @@ SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
   AVOSCloud: c7a0514461c5cd612aa7917ed23379ca667d81c9
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   WeChat_SDK: 235a2ae8967bcbe54c1e5668c187641c886b19af
 
-PODFILE CHECKSUM: 2181948cb39ecf394701837e033a6bb6255df8a8
+PODFILE CHECKSUM: ed9d4eb8b17c8a93a573873c4ad5813da20b91e3
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1.beta.1

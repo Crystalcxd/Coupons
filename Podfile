@@ -8,5 +8,6 @@ pod 'ASIHTTPRequest'
 pod 'AVOSCloud'
 pod 'WeChat_SDK'
 pod 'AFNetworking'
+pod 'RDVTabBarController'
 
 end

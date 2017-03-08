@@ -57,11 +57,6 @@
     
     [self setTabBarHidden:self.isTabBarHidden animated:NO];
 }
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    [self setTabBarHidden:self.isTabBarHidden animated:NO];
-
-}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return self.selectedViewController.preferredStatusBarStyle;
@@ -141,12 +136,8 @@
         
         NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
         
-        NSInteger count = viewControllers.count;
-        
-        for (int i = 0; i < count; i++) {
-            UIViewController *viewController = [viewControllers objectAtIndex:i];
+        for (UIViewController *viewController in viewControllers) {
             RDVTabBarItem *tabBarItem = [[RDVTabBarItem alloc] init];
-            tabBarItem.tag = 1000 + i;
             [tabBarItem setTitle:viewController.title];
             [tabBarItems addObject:tabBarItem];
             [viewController rdv_setTabBarController:self];
@@ -209,7 +200,7 @@
             tabBarHeight = 49;
         }
         
-        if (!weakSelf.tabBarHidden) {
+        if (!hidden) {
             tabBarStartingY = viewSize.height - tabBarHeight;
             if (![[weakSelf tabBar] isTranslucent]) {
                 contentViewHeight -= ([[weakSelf tabBar] minimumContentHeight] ?: tabBarHeight);
@@ -222,7 +213,7 @@
     };
     
     void (^completion)(BOOL) = ^(BOOL finished){
-        if (weakSelf.tabBarHidden) {
+        if (hidden) {
             [[weakSelf tabBar] setHidden:YES];
         }
     };

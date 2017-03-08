@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RDVTabBarController.h"
-#import "RDVTabBarItem.h"
+#import <RDVTabBarController/RDVTabBarController.h>
+#import <RDVTabBarController/RDVTabBarItem.h>
+#import <RDVTabBarController/RDVTabBar.h>
 #import "MLNavigationController.h"
 
 #import "WXApi.h"

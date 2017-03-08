@@ -65,18 +65,18 @@
     [self setBackgroundColor:[UIColor clearColor]];
     
     _title = @"";
-    _titlePositionAdjustment = UIOffsetMake(0, 2);
+    _titlePositionAdjustment = UIOffsetZero;
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
         _unselectedTitleAttributes = @{
                                        NSFontAttributeName: [UIFont systemFontOfSize:12],
-                                       NSForegroundColorAttributeName: [UIColor whiteColor],
+                                       NSForegroundColorAttributeName: [UIColor blackColor],
                                        };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
         _unselectedTitleAttributes = @{
                                        UITextAttributeFont: [UIFont systemFontOfSize:12],
-                                       UITextAttributeTextColor: [UIColor whiteColor],
+                                       UITextAttributeTextColor: [UIColor blackColor],
                                        };
 #endif
     }
@@ -111,10 +111,7 @@
         titleAttributes = [self unselectedTitleAttributes];
     }
     
-    imageSize = CGSizeMake(30, 30);
-    if (self.tag == 1001) {
-        imageSize = CGSizeMake(64 / 46.0 * 30, 30);
-    }
+    imageSize = [image size];
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
@@ -184,7 +181,7 @@
     
     // Draw badges
     
-    if ([[self badgeValue] integerValue] != 0) {
+    if ([[self badgeValue] length]) {
         CGSize badgeSize = CGSizeZero;
         
         if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
@@ -295,17 +292,5 @@
         [self setUnselectedBackgroundImage:unselectedImage];
     }
 }
-
-#pragma mark - Accessibility
-
-- (NSString *)accessibilityLabel{
-    return @"tabbarItem";
-}
-
-- (BOOL)isAccessibilityElement
-{
-    return YES;
-}
-
 
 @end

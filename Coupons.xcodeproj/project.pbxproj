@@ -63,9 +63,6 @@
 		4CE87ED41B18499C0011D6B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87ED31B18499C0011D6B5 /* AppDelegate.m */; };
 		4CE87EDC1B18499C0011D6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE87EDB1B18499C0011D6B5 /* Images.xcassets */; };
 		4CE87EEB1B18499C0011D6B5 /* CouponsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87EEA1B18499C0011D6B5 /* CouponsTests.m */; };
-		4CE87EFB1B184DDB0011D6B5 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87EF61B184DDB0011D6B5 /* RDVTabBar.m */; };
-		4CE87EFC1B184DDB0011D6B5 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87EF81B184DDB0011D6B5 /* RDVTabBarController.m */; };
-		4CE87EFD1B184DDB0011D6B5 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87EFA1B184DDB0011D6B5 /* RDVTabBarItem.m */; };
 		4CE87F011B1850280011D6B5 /* MLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87F001B1850280011D6B5 /* MLNavigationController.m */; };
 		4CE87F3C1B1F12490011D6B5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87F3B1B1F12490011D6B5 /* RootViewController.m */; };
 		4CE87F401B1F142E0011D6B5 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE87F3F1B1F142E0011D6B5 /* Utility.m */; };
@@ -166,12 +163,6 @@
 		4CE87EE41B18499C0011D6B5 /* CouponsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE87EE91B18499C0011D6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE87EEA1B18499C0011D6B5 /* CouponsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponsTests.m; sourceTree = "<group>"; };
-		4CE87EF51B184DDB0011D6B5 /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
-		4CE87EF61B184DDB0011D6B5 /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
-		4CE87EF71B184DDB0011D6B5 /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
-		4CE87EF81B184DDB0011D6B5 /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
-		4CE87EF91B184DDB0011D6B5 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
-		4CE87EFA1B184DDB0011D6B5 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		4CE87EFF1B1850280011D6B5 /* MLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLNavigationController.h; sourceTree = "<group>"; };
 		4CE87F001B1850280011D6B5 /* MLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLNavigationController.m; sourceTree = "<group>"; };
 		4CE87F3A1B1F12490011D6B5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -362,7 +353,6 @@
 				4CE87F3D1B1F141F0011D6B5 /* Utility */,
 				4CE87F041B1C77980011D6B5 /* ViewController */,
 				4CE87EFE1B1850280011D6B5 /* Navigation */,
-				4CE87EF41B184DDB0011D6B5 /* RDVTabBarController */,
 				4CE87ED21B18499C0011D6B5 /* AppDelegate.h */,
 				4CE87ED31B18499C0011D6B5 /* AppDelegate.m */,
 				4CE87EDB1B18499C0011D6B5 /* Images.xcassets */,
@@ -399,19 +389,6 @@
 				4CE87EE91B18499C0011D6B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4CE87EF41B184DDB0011D6B5 /* RDVTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				4CE87EF51B184DDB0011D6B5 /* RDVTabBar.h */,
-				4CE87EF61B184DDB0011D6B5 /* RDVTabBar.m */,
-				4CE87EF71B184DDB0011D6B5 /* RDVTabBarController.h */,
-				4CE87EF81B184DDB0011D6B5 /* RDVTabBarController.m */,
-				4CE87EF91B184DDB0011D6B5 /* RDVTabBarItem.h */,
-				4CE87EFA1B184DDB0011D6B5 /* RDVTabBarItem.m */,
-			);
-			path = RDVTabBarController;
 			sourceTree = "<group>";
 		};
 		4CE87EFE1B1850280011D6B5 /* Navigation */ = {
@@ -602,7 +579,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FDE3D9D9A1FFC7E0B4BF7718 /* [CP] Embed Pods Frameworks */ = {
@@ -630,7 +607,6 @@
 				4CD07ECE1B21BB5E000D1DB9 /* CouponsListViewController.m in Sources */,
 				4CE87F431B1F15940011D6B5 /* HomeViewController.m in Sources */,
 				4CEC14531BFB3BE400CCBE68 /* UpdateTime.m in Sources */,
-				4CE87EFC1B184DDB0011D6B5 /* RDVTabBarController.m in Sources */,
 				4C0676811B4E133F00B46386 /* CityCell.m in Sources */,
 				4CE87F3C1B1F12490011D6B5 /* RootViewController.m in Sources */,
 				4C88B74A1B4D0A2F0028F293 /* MptTableHeadCell.m in Sources */,
@@ -644,11 +620,9 @@
 				4CD07ED11B21BEE8000D1DB9 /* CouponsCell.m in Sources */,
 				4CE87F011B1850280011D6B5 /* MLNavigationController.m in Sources */,
 				4CA5CE391B2E786E0095AF51 /* AboutViewController.m in Sources */,
-				4CE87EFB1B184DDB0011D6B5 /* RDVTabBar.m in Sources */,
 				4CF9710E1C95792A009C2A62 /* DailyCartoon.m in Sources */,
 				4C88B74D1B4D0ABD0028F293 /* MptPageControl.m in Sources */,
 				4CE87ED11B18499C0011D6B5 /* main.m in Sources */,
-				4CE87EFD1B184DDB0011D6B5 /* RDVTabBarItem.m in Sources */,
 				4C816AAB1B4EABA300C75954 /* UIImage+KIAdditions.m in Sources */,
 				4CA5CE3C1B2EAFE40095AF51 /* CartoonViewController.m in Sources */,
 				4C5F5BED1B749BB800B7E800 /* Coupons.m in Sources */,
