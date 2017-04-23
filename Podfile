@@ -9,5 +9,6 @@ pod 'AVOSCloud'
 pod 'WeChat_SDK'
 pod 'AFNetworking'
 pod 'RDVTabBarController'
+pod 'CocoaAsyncSocket'
 
 end
