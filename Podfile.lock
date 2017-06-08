@@ -27,7 +27,7 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
-  - AVOSCloud (5.0.0)
+  - AVOSCloud (5.0.1)
   - CocoaAsyncSocket (7.6.1)
   - MBProgressHUD (1.0.0)
   - RDVTabBarController (1.1.9)
@@ -50,7 +50,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
-  AVOSCloud: 45a804e86d8d62307faaff5b162ea7dd101d5e02
+  AVOSCloud: 3e0a9813852d923966a8af59d6e6d42517d3abe5
   CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
