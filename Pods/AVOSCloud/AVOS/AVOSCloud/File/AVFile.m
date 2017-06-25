@@ -249,12 +249,15 @@ static LCHTTPSessionManager *imageSessionManager = nil;
 - (void)feedbackUploadResult:(BOOL)succeeded {
     NSString *token = self.token;
 
-    if (!token)
-        return;
+    if (token) {
+        NSDictionary *parameters = @{@"token":token, @"result":@(succeeded)};
+        [[AVPaasClient sharedInstance] postObject:@"fileCallback" withParameters:parameters block:nil];
+    }
 
-    NSDictionary *parameters = @{@"token":token, @"result":@(succeeded)};
-
-    [[AVPaasClient sharedInstance] postObject:@"fileCallback" withParameters:parameters block:nil];
+    /* If upload did fail, reset the objectId for later upload. */
+    if (!succeeded) {
+        self.objectId = nil;
+    }
 }
 
 - (void)updateURLWithResultBlock:(AVBooleanResultBlock)resultBlock progressBlock:(AVProgressBlock)progressBlock {
@@ -792,6 +795,17 @@ typedef void (^AVFileSizeBlock)(long long fileSize);
     return [NSString stringWithFormat:@"classes/_file"];
 }
 
+- (NSString *)objectEndpoint {
+    NSString *objectId = self.objectId;
+
+    if (!objectId)
+        return nil;
+
+    NSString *endpoint = [@"files" stringByAppendingPathComponent:objectId];
+
+    return endpoint;
+}
+
 + (void)getFileWithObjectId:(NSString*)objectId
                   withBlock:(AVFileResultBlock)block
 {
@@ -913,6 +927,40 @@ typedef void (^AVFileSizeBlock)(long long fileSize);
                                           block:^(id object, NSError *error) {
                                               [AVUtils callBooleanResultBlock:block error:error];
                                           }];
+}
+
++ (void)deleteFiles:(NSArray<AVFile *> *)files inBackgroundWithBlock:(AVBooleanResultBlock)block {
+    if (!files.count) {
+        [AVUtils callBooleanResultBlock:block error:nil];
+        return;
+    }
+
+    NSMutableArray *requests = [NSMutableArray array];
+
+    for (AVFile *file in files) {
+        NSError *error = nil;
+
+        if (![file isKindOfClass:[AVFile class]])
+            error = [AVErrorUtils errorWithText:@"Invalid file object."];
+
+        NSString *endpoint = file.objectEndpoint;
+
+        if (!endpoint)
+            error = [AVErrorUtils errorWithText:@"Cannot delete a file that has not been saved."];
+
+        if (error) {
+            [AVUtils callBooleanResultBlock:block error:error];
+            return;
+        }
+
+        NSMutableDictionary *request = [AVPaasClient batchMethod:@"DELETE" path:endpoint body:nil parameters:nil];
+
+        [requests addObject:request];
+    }
+
+    [[AVPaasClient sharedInstance] postBatchObject:requests block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        [AVUtils callBooleanResultBlock:block error:error];
+    }];
 }
 
 - (void)deleteInBackground {
