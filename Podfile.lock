@@ -32,9 +32,9 @@ PODS:
   - MBProgressHUD (1.0.0)
   - RDVTabBarController (1.1.9)
   - Reachability (3.2)
-  - SDWebImage (4.1.0):
-    - SDWebImage/Core (= 4.1.0)
-  - SDWebImage/Core (4.1.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
   - WeChat_SDK (1.7.5.1)
 
 DEPENDENCIES:
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   WeChat_SDK: 235a2ae8967bcbe54c1e5668c187641c886b19af
 
 PODFILE CHECKSUM: 73556c77ae4f5bc36067947c1be6801bcf635612
