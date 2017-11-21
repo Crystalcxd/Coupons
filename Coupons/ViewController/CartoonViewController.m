@@ -101,13 +101,6 @@
         
         [self.currentImageDic setValuesForKeysWithDictionary:cartoon.imageUrlDic];
         
-//        array = [WMUserDefault arrayForKey:@"CartoonList"];
-        
-//        if (array.count > time) {
-//            NSString *imgUrl = [array objectAtIndex:time];
-//            [self.image sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
-//        }
-        
         UITableView *table = (UITableView *)[self.view viewWithTag:TABLEVIEW_BEGIN_TAG];
         
         [table reloadData];
@@ -135,19 +128,6 @@
         UITableView *table = (UITableView *)[self.view viewWithTag:TABLEVIEW_BEGIN_TAG];
         
         [table reloadData];
-
-//        if (array.count > time) {
-//            [WMUserDefault setFloatVaule:timeInterval forKey:kLastCartoonSaveTime];
-//            
-//            
-//            
-//            AVObject *object = [array objectAtIndex:time];
-//            
-//            AVFile *file = [object objectForKey:@"image"];
-//            [self.image sd_setImageWithURL:[NSURL URLWithString:file.url]];
-//            
-//            [self saveDataWith:array];
-//        }
     }
     
 }
@@ -311,31 +291,6 @@
 - (void)tableHeadView:(MptTableHeadView *)headView didSelectIndex:(NSUInteger)index {
     [self goWebView];
     return;
-    
-//    if (self.array.count == 0) {
-//        return;
-//    }
-//    
-//    id objc = nil;
-//    if (self.array.count > index) {
-//        objc = [self.array objectAtIndex:index];
-//    } else {
-//        return;
-//    }
-//    
-//    if ([objc isKindOfClass:[NSString class]]) {
-//        return;
-//    }
-//    else if ([objc isKindOfClass:[AVObject class]]) {
-//        AVObject *object = (AVObject *)objc;
-//        
-//        NSString *str = [Utility safeStringWith:[object objectForKey:@"jumpUrl"]];
-//        if ([str isEqualToString:@""] || [str isEqualToString:@" "]) {
-//            return;
-//        }
-//        
-//        [self goWebViewWith:str];
-//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -407,25 +362,15 @@
     
     NSString *str = [dic objectForKey:@"imageUrl"];
     
-//    Coupons *coupons = [self.array objectAtIndex:indexPath.row];
-    
     CartoonCell *cell = [tableView dequeueReusableCellWithIdentifier:couponsIdentifier];
     if (cell == nil) {
         cell = [[CartoonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:couponsIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
-//    cell.delegate = self;
-    
     if (str.length != 0) {
         [cell configCellWith:str];
     }
-    
-//    if (indexPath.row%2 == 0) {
-//        cell.backgroundColor = HexRGB(0xfcd4e3);
-//    }else{
-//        cell.backgroundColor = HexRGB(0xfce8e8);
-//    }
     
     return cell;
 }

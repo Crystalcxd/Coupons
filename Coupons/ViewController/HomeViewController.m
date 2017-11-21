@@ -136,28 +136,6 @@
 
 }
 
--(NSString*) uuid {
-    CFUUIDRef puuid = CFUUIDCreate( nil );
-    CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
-    NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
-    CFRelease(puuid);
-    CFRelease(uuidString);
-    return result;
-}
-
-- (NSString *)md5HexDigest:(NSString*)input
-{
-    const char* str = [input UTF8String];
-    unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(str, strlen(str), result);
-    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH*2];//
-    
-    for(int i = 0; i<CC_MD5_DIGEST_LENGTH; i++) {
-        [ret appendFormat:@"%02x",result[i]];
-    }
-    return ret;
-}
-
 - (void)updateItemViewColorWith:(NSInteger)tag
 {
     for (UIView *view in self.scrollview.subviews) {
@@ -270,38 +248,6 @@
 -(void)showActionSheet
 {
     if (self.cityArray.count != 0) {
-//        NSMutableArray *array = [self nameArrayFrom:self.cityArray];
-//        
-//        // 创建时不指定按钮
-//        
-//        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil   delegate:self
-//                                
-//                                                  cancelButtonTitle:nil
-//                                
-//                                             destructiveButtonTitle:nil
-//                                
-//                                                  otherButtonTitles:nil];
-//        
-//        // 逐个添加按钮（比如可以是数组循环）
-//        
-//        NSInteger count = [array count];
-//        
-//        for (int i = 0; i < count; i++) {
-//            NSString *str = [array objectAtIndex:i];
-//            
-//            [sheet addButtonWithTitle:str];
-//        }
-//        
-//        // 同时添加一个取消按钮
-//        
-//        [sheet addButtonWithTitle:@"取消"];
-//        
-//        // 将取消按钮的index设置成我们刚添加的那个按钮，这样在delegate中就可以知道是那个按钮 
-//        
-//        // NB - 这会导致该按钮显示时有黑色背景 
-//        
-//        sheet.cancelButtonIndex = sheet.numberOfButtons-1; 
-//        [sheet showInView:self.view];
         [self.chooseView viewOpen];
     }else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"没有城市信息！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

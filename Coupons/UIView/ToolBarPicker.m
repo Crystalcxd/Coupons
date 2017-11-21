@@ -119,7 +119,6 @@
 }
 
 -(void)done{
-//    [self viewClose];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     NSNotification *notification = [NSNotification notificationWithName:@"refresh" object:nil];
     [notificationCenter postNotification:notification];

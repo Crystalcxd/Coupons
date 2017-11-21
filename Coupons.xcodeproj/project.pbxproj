@@ -72,7 +72,6 @@
 		4CE87F4B1B1F1F7A0011D6B5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE87F4A1B1F1F7A0011D6B5 /* MobileCoreServices.framework */; };
 		4CE87F4D1B1F1F890011D6B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE87F4C1B1F1F890011D6B5 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4CE87F4F1B1F1F920011D6B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE87F4E1B1F1F920011D6B5 /* Foundation.framework */; };
-		4CEC14531BFB3BE400CCBE68 /* UpdateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC14521BFB3BE400CCBE68 /* UpdateTime.m */; };
 		4CF4B5431B4CD34F00017C9A /* ad2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF4B5421B4CD34F00017C9A /* ad2@2x.png */; };
 		4CF9710E1C95792A009C2A62 /* DailyCartoon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9710D1C95792A009C2A62 /* DailyCartoon.m */; };
 /* End PBXBuildFile section */
@@ -176,8 +175,6 @@
 		4CE87F4A1B1F1F7A0011D6B5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4CE87F4C1B1F1F890011D6B5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4CE87F4E1B1F1F920011D6B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CEC14511BFB3BE400CCBE68 /* UpdateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateTime.h; sourceTree = "<group>"; };
-		4CEC14521BFB3BE400CCBE68 /* UpdateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTime.m; sourceTree = "<group>"; };
 		4CF4B5421B4CD34F00017C9A /* ad2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ad2@2x.png"; sourceTree = "<group>"; };
 		4CF9710C1C95792A009C2A62 /* DailyCartoon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCartoon.h; sourceTree = "<group>"; };
 		4CF9710D1C95792A009C2A62 /* DailyCartoon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyCartoon.m; sourceTree = "<group>"; };
@@ -251,8 +248,6 @@
 				4C5F5BEC1B749BB800B7E800 /* Coupons.m */,
 				4CF9710C1C95792A009C2A62 /* DailyCartoon.h */,
 				4CF9710D1C95792A009C2A62 /* DailyCartoon.m */,
-				4CEC14511BFB3BE400CCBE68 /* UpdateTime.h */,
-				4CEC14521BFB3BE400CCBE68 /* UpdateTime.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -612,7 +607,6 @@
 			files = (
 				4CD07ECE1B21BB5E000D1DB9 /* CouponsListViewController.m in Sources */,
 				4CE87F431B1F15940011D6B5 /* HomeViewController.m in Sources */,
-				4CEC14531BFB3BE400CCBE68 /* UpdateTime.m in Sources */,
 				4C0676811B4E133F00B46386 /* CityCell.m in Sources */,
 				4CE87F3C1B1F12490011D6B5 /* RootViewController.m in Sources */,
 				4C88B74A1B4D0A2F0028F293 /* MptTableHeadCell.m in Sources */,

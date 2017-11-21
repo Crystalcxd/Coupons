@@ -30,10 +30,6 @@
     UILabel *firstLine = [[UILabel alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, SCREENWIDTH, 0.7)];
     firstLine.backgroundColor = RGBA(252, 63, 56, 1);
     [self.view addSubview:firstLine];
-    
-    UILabel *secondLine = [[UILabel alloc] initWithFrame:CGRectMake(0, kStatusBarHeight + 54, SCREENWIDTH, 0.7)];
-    secondLine.backgroundColor = HexRGB(0xd7d7d7);
-//    [self.view addSubview:secondLine];
 
     UILabel *info = [[UILabel alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, SCREENWIDTH, 54)];
     info.textAlignment = NSTextAlignmentCenter;
