@@ -231,6 +231,7 @@
 		9A253E2E1169129EEC436D812B4FC040 /* AVJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F832F96EC41DD445AAEF9A2B49A123 /* AVJSONRequestOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9AED6D02FBD8ED5A18482CF2B5C8F403 /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CC86612B7461F7129AF4F6E631C35D /* ASIS3Bucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9B827236835AD586EF3E492A17529D0D /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F36B6C93A7B270CB936D47A0DD39557 /* SDWebImagePrefetcher.m */; };
+		9BAB683C022E8EC590F15915C4CBDDEB /* LCRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D1F255CCAD3C044C3F1B8F448A1F4C /* LCRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C42B4E3AE6ED9E734E9792386908FB0 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 649B0121DBE0810E1C9B46C142D93D8C /* SDWebImageManager.m */; };
 		9DE31D8C2BEDFE670A716770308E1497 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = E857A6D2EA05F9262C0F4DF90D7A9F8A /* SDWebImageCompat.m */; };
 		9E732359F9E9119A4FB96E05AF7E5DA5 /* NSDictionary+LCHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6C0ADD99148E552242BFDE7A8C716A /* NSDictionary+LCHash.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -287,7 +288,6 @@
 		C1BB6D653C6DAE7533C450B3ED891189 /* LCObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A83D42BE728278D462120966C562BD7 /* LCObserver.m */; };
 		C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 59CDD418EB9AD52F1E049F7A6A6B07A0 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C20B9F2DC60EFA5CFE10F8994CAD24DF /* AVFile_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 01645CA1D4F4CEE7A2AF8D6A9086BB86 /* AVFile_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C2A732D111A3E2AC71217824CD54B191 /* LCRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D1F255CCAD3C044C3F1B8F448A1F4C /* LCRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C333676571848452899C6CDBFCD7B812 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B36A1DA6B32CBACB01DFCD2764056328 /* UIButton+WebCache.m */; };
 		C4690BA23B8252C67950B3F00C7FFBD2 /* AVACL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F71B24E0E469A045D774F987620484 /* AVACL_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C86F872499B2A87438D1C4913BEBC66E /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A770022C624E3B031BFBC65ABAB17 /* ASICloudFilesObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -489,7 +489,6 @@
 		11225D57AFC8209CEE3BEC79F66758C5 /* ASICloudFilesRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesRequest.h; path = Classes/CloudFiles/ASICloudFilesRequest.h; sourceTree = "<group>"; };
 		143E43FB7449409A8CF50BF51559A89F /* AVOSCloud_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVOSCloud_Internal.h; path = AVOS/AVOSCloud/AVOSCloud_Internal.h; sourceTree = "<group>"; };
 		143FE5F080D412C7972A97CB45EA4F8C /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCodersManager.m; path = SDWebImage/SDWebImageCodersManager.m; sourceTree = "<group>"; };
-		146B1398604BD5C1F1ACBA7460B41DF9 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.5/libWeChatSDK.a; sourceTree = "<group>"; };
 		14A380F1E323C96BE24F5763A36E0303 /* Pods-Coupons-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Coupons-acknowledgements.markdown"; sourceTree = "<group>"; };
 		166E5FD6F96AE07B33329B61841A5668 /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
 		175A841D8F6DCA16BB2A704BC6223C4F /* ASIS3Bucket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3Bucket.h; path = Classes/S3/ASIS3Bucket.h; sourceTree = "<group>"; };
@@ -537,9 +536,9 @@
 		361C38638810364D4F3B6E7B9C6A261E /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		38BC83FC293BAAC968948CA901E36D45 /* LCDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseQueue.m; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseQueue.m; sourceTree = "<group>"; };
 		3972ADDC3F87963AF7DCD42E1DF7D06A /* AVRelation_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRelation_Internal.h; path = AVOS/AVOSCloud/Object/AVRelation_Internal.h; sourceTree = "<group>"; };
-		3A37D1EB0050A4812565046A6F4A3546 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.5/WXApi.h; sourceTree = "<group>"; };
 		3AC52250C741AECA1701873A526A1F7F /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		3AD1E289D4F804F5703B69C1325E01EB /* AVFriendQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFriendQuery.h; path = AVOS/AVOSCloud/Query/AVFriendQuery.h; sourceTree = "<group>"; };
+		3B3EA2FB28A0EAA35BEC756092AC06F6 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		3B9FD32089C85BBFC74CB9C440409B69 /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFile.h; path = AVOS/AVOSCloud/File/AVFile.h; sourceTree = "<group>"; };
 		3C27B8CC38A60AEB49DFA739BED857F2 /* AVSMS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVSMS.h; path = AVOS/AVOSCloud/SMS/AVSMS.h; sourceTree = "<group>"; };
 		3C414AB2DECA8D36EEF24C64082595B5 /* NSDictionary+LCHash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+LCHash.m"; path = "AVOS/AVOSCloud/Utils/NSDictionary+LCHash.m"; sourceTree = "<group>"; };
@@ -655,6 +654,7 @@
 		833EEB1ED864C87AA5AB28C00A5174CD /* AVInstallation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVInstallation.m; path = AVOS/AVOSCloud/Push/AVInstallation.m; sourceTree = "<group>"; };
 		8384F23E7C047FF1C77912E7247F4625 /* RDVTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDVTabBar.m; path = RDVTabBarController/RDVTabBar.m; sourceTree = "<group>"; };
 		8523268AE49D86BF00034459A189422F /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = SDWebImage/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
+		85241F1CD7F71787CB8F1CCF2C8882ED /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		8660908DD74793406E18B05C932C1F7E /* LCDatabaseMigrator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseMigrator.m; path = AVOS/AVOSCloud/Utils/LCDatabaseMigrator.m; sourceTree = "<group>"; };
 		869A040DC7F24D651FA45B909605B27D /* JRSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = AVOS/AVOSCloud/Utils/JRSwizzle.m; sourceTree = "<group>"; };
 		87CE1BE9A32657E2A3E15BFE4214910A /* AVCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVCacheManager.m; path = AVOS/AVOSCloud/Cache/AVCacheManager.m; sourceTree = "<group>"; };
@@ -688,7 +688,6 @@
 		9F2A8D3B17EADBC47AF4F35AF0ED4540 /* AVPaasClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPaasClient.h; path = AVOS/AVOSCloud/Request/AVPaasClient.h; sourceTree = "<group>"; };
 		9FB813050486702E1DFD75B64F9D275A /* LCResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCResultSet.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCResultSet.h; sourceTree = "<group>"; };
 		9FCCB971454D0D91CF5169FC7A64C149 /* LCSSLChallenger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCSSLChallenger.h; path = AVOS/AVOSCloud/Utils/LCSSLChallenger.h; sourceTree = "<group>"; };
-		A10F9AF8C435F8664F49989598CFB639 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.5/WechatAuthSDK.h; sourceTree = "<group>"; };
 		A19E67CC527F3F44D2C2D97B2F4AAF36 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		A1B1022B153A48150E2B8FBBFC96E148 /* LCDatabaseCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseCoordinator.m; path = AVOS/AVOSCloud/Utils/LCDatabaseCoordinator.m; sourceTree = "<group>"; };
 		A2A4E58F7DFA9BAB9418A60272A93879 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
@@ -754,7 +753,6 @@
 		C87ADF7BF185FE2C8127D301505FC286 /* AVGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVGeoPoint.h; path = AVOS/AVOSCloud/Geo/AVGeoPoint.h; sourceTree = "<group>"; };
 		C8E3A94C813698D6459D8C84D4CB8116 /* RDVTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDVTabBarController-prefix.pch"; sourceTree = "<group>"; };
 		C8EE77025A198C2432EA333DBFBA47C1 /* ASIS3ObjectRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3ObjectRequest.m; path = Classes/S3/ASIS3ObjectRequest.m; sourceTree = "<group>"; };
-		C95E9BD62BF61A4A311A0F250EBE25BE /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.5/WXApiObject.h; sourceTree = "<group>"; };
 		C9AF76B01283E736543EF78080E73A3E /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVConstants.h; path = AVOS/AVOSCloud/AVConstants.h; sourceTree = "<group>"; };
 		C9E2DEBE42A35FEBD2DCD9114D4A9B7C /* libASIHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libASIHTTPRequest.a; path = libASIHTTPRequest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE9C08F7AB2F324154A2DA649171F1E /* AVPush_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPush_Internal.h; path = AVOS/AVOSCloud/Push/AVPush_Internal.h; sourceTree = "<group>"; };
@@ -827,6 +825,8 @@
 		EFEAEAB216ED46B439B236DF3D1BCD2A /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		F119E98F2EE3530B67371B88E3FEDD8C /* AVRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRole.h; path = AVOS/AVOSCloud/ACL/AVRole.h; sourceTree = "<group>"; };
 		F2D1F255CCAD3C044C3F1B8F448A1F4C /* LCRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCRouter.h; path = AVOS/AVOSCloud/Router/LCRouter.h; sourceTree = "<group>"; };
+		F476AECFC55B7B6B6588B369F49F9EA4 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		F649727EC9BF2062C5E92DA74BFEADCF /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		F6CC19523BA66238CEE0EA5F3B8B832F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		F77C689C859C5AE95277EE272B3E672B /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
 		F8568C0B33956E34C8AAD198F51BD346 /* AVACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVACL.h; path = AVOS/AVOSCloud/ACL/AVACL.h; sourceTree = "<group>"; };
@@ -954,7 +954,7 @@
 				45A9A8DB02A2BD3941BBEE7CD7EEB4F6 /* RDVTabBarController */,
 				FCB944EC8F2F49FB3966B306AC271CEF /* Reachability */,
 				7A9DEBC5CA4272BC914E9BF5BB73B39A /* SDWebImage */,
-				A30F1BB1946B4674BE2B6BB8155E8E14 /* WeChat_SDK */,
+				FF50D2610248F5EF87774EA76196FA5C /* WeChat_SDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1286,6 +1286,14 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		3165BBF9918AA047693C430CC2384D85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F649727EC9BF2062C5E92DA74BFEADCF /* libWeChatSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33A927D239F63AD1039C1FA268CC868F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1501,18 +1509,6 @@
 			name = Security;
 			sourceTree = "<group>";
 		};
-		A30F1BB1946B4674BE2B6BB8155E8E14 /* WeChat_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				A10F9AF8C435F8664F49989598CFB639 /* WechatAuthSDK.h */,
-				3A37D1EB0050A4812565046A6F4A3546 /* WXApi.h */,
-				C95E9BD62BF61A4A311A0F250EBE25BE /* WXApiObject.h */,
-				FDC613BC0090FF0AF79335BD3AB03207 /* Frameworks */,
-			);
-			name = WeChat_SDK;
-			path = WeChat_SDK;
-			sourceTree = "<group>";
-		};
 		B4716D44B3CA7752C2E3B3BE6807EC6B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1630,12 +1626,16 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		FDC613BC0090FF0AF79335BD3AB03207 /* Frameworks */ = {
+		FF50D2610248F5EF87774EA76196FA5C /* WeChat_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				146B1398604BD5C1F1ACBA7460B41DF9 /* libWeChatSDK.a */,
+				F476AECFC55B7B6B6588B369F49F9EA4 /* WechatAuthSDK.h */,
+				85241F1CD7F71787CB8F1CCF2C8882ED /* WXApi.h */,
+				3B3EA2FB28A0EAA35BEC756092AC06F6 /* WXApiObject.h */,
+				3165BBF9918AA047693C430CC2384D85 /* Frameworks */,
 			);
-			name = Frameworks;
+			name = WeChat_SDK;
+			path = WeChat_SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1870,7 +1870,7 @@
 				772EE7A4AC1FBDAA577BB87718B67ED6 /* LCNetworkStatistics.h in Headers */,
 				F1A7FBA239BB6D9F502E41A02C7FBAA0 /* LCObserver.h in Headers */,
 				3F7678BE6A9D9D4DE1941BF0670D38EA /* LCResultSet.h in Headers */,
-				C2A732D111A3E2AC71217824CD54B191 /* LCRouter.h in Headers */,
+				9BAB683C022E8EC590F15915C4CBDDEB /* LCRouter.h in Headers */,
 				C8EAE00E0A0B85D7B73BB50ED5D025ED /* LCSecurityPolicy.h in Headers */,
 				EA8B8EF5D255FC8A35960426C91C3096 /* LCSSLChallenger.h in Headers */,
 				AB1E779806F0233D27BF3DBE0E9728CE /* LCURLConnection.h in Headers */,
