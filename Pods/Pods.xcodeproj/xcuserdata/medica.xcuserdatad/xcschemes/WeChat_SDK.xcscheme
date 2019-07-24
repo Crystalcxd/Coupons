@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A76B238139D4EC6FF68DF50A2A31D72E"
-               BuildableName = "libASIHTTPRequest.a"
-               BlueprintName = "ASIHTTPRequest"
+               BlueprintIdentifier = "4FDC8D3234D46CBFC74FD87472041248"
+               BuildableName = "WeChat_SDK"
+               BlueprintName = "WeChat_SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
