@@ -1,7 +1,8 @@
 platform :ios, '8.0'
 
 target 'Coupons' do
- 
+source 'https://github.com/CocoaPods/Specs.git'
+
 pod 'MBProgressHUD'
 pod 'SDWebImage'
 pod 'ASIHTTPRequest'
