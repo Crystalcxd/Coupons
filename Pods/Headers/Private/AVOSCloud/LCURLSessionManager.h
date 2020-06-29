@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCURLSessionManager.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCURLSessionManager.h

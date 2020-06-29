@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/JNKeychain/AVKeychain.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/JNKeychain/AVKeychain.h

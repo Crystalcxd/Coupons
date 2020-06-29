@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCNetworking.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCNetworking.h

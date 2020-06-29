@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCURLResponseSerialization.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCURLResponseSerialization.h

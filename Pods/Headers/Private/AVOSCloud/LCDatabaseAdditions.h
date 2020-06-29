@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseAdditions.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCDB/LCDatabaseAdditions.h

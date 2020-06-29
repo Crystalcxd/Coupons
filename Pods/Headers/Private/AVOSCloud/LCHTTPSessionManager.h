@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCHTTPSessionManager.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCHTTPSessionManager.h

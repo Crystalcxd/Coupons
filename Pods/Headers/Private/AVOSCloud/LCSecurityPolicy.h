@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCSecurityPolicy.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCSecurityPolicy.h

@@ -1,1 +1,1 @@
-../../../AVOSCloud/AVOS/AVOSCloud/ThirdParty/LCNetworking/LCNetworkReachabilityManager.h
+../../../AVOSCloud/AVOS/AVOSCloud/Vendor/LCNetworking/LCNetworkReachabilityManager.h
