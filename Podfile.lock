@@ -27,14 +27,14 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
-  - AVOSCloud (12.2.0)
+  - AVOSCloud (12.3.0)
   - CocoaAsyncSocket (7.6.4)
   - MBProgressHUD (1.2.0)
   - RDVTabBarController (1.3.0)
   - Reachability (3.2)
-  - SDWebImage (5.8.3):
-    - SDWebImage/Core (= 5.8.3)
-  - SDWebImage/Core (5.8.3)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
   - WeChat_SDK (1.8.1)
 
 DEPENDENCIES:
@@ -62,12 +62,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
-  AVOSCloud: 6a2c1984c635e24ed9d5c11f4e4c3977d982763b
+  AVOSCloud: bed104accc6fc53c3d16c3f52c8dfdff02251898
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   RDVTabBarController: 28a5c6546b9991cf2712d59947324c6b06603e14
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   WeChat_SDK: 681388233ac24a3ed6c4803cb3e0b6d3602050aa
 
 PODFILE CHECKSUM: e4e9f234a6db49a253e4c09b85d71e327d921b66
