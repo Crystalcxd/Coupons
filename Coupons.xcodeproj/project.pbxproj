@@ -40,11 +40,9 @@
 		4CA6760E1BB531FC005530BF /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA6760D1BB531FC005530BF /* libicucore.tbd */; };
 		4CA676101BB53212005530BF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA6760F1BB53212005530BF /* libxml2.tbd */; };
 		4CA676121BB53220005530BF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA676111BB53220005530BF /* libz.tbd */; };
-		4CA676141BB53232005530BF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA676131BB53232005530BF /* libstdc++.tbd */; };
 		4CC317F21C84316500F4010F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317F11C84316500F4010F /* MapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4CC317F41C84319000F4010F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317F31C84319000F4010F /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4CC317F61C84375900F4010F /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317F51C84375900F4010F /* libiconv.tbd */; };
-		4CC317F81C84376E00F4010F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317F71C84376E00F4010F /* libstdc++.6.0.9.tbd */; };
 		4CC317FA1C84379100F4010F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317F91C84379100F4010F /* libsqlite3.0.tbd */; };
 		4CC317FC1C8437B500F4010F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317FB1C8437B500F4010F /* CoreFoundation.framework */; };
 		4CC317FE1C8437CB00F4010F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC317FD1C8437CB00F4010F /* CoreData.framework */; };
@@ -131,11 +129,9 @@
 		4CA6760D1BB531FC005530BF /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		4CA6760F1BB53212005530BF /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		4CA676111BB53220005530BF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		4CA676131BB53232005530BF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4CC317F11C84316500F4010F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4CC317F31C84319000F4010F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4CC317F51C84375900F4010F /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		4CC317F71C84376E00F4010F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		4CC317F91C84379100F4010F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4CC317FB1C8437B500F4010F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		4CC317FD1C8437CB00F4010F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -205,11 +201,9 @@
 				4CC317FE1C8437CB00F4010F /* CoreData.framework in Frameworks */,
 				4CC317FC1C8437B500F4010F /* CoreFoundation.framework in Frameworks */,
 				4CC317FA1C84379100F4010F /* libsqlite3.0.tbd in Frameworks */,
-				4CC317F81C84376E00F4010F /* libstdc++.6.0.9.tbd in Frameworks */,
 				4CC317F61C84375900F4010F /* libiconv.tbd in Frameworks */,
 				4CC317F41C84319000F4010F /* libsqlite3.tbd in Frameworks */,
 				4CC317F21C84316500F4010F /* MapKit.framework in Frameworks */,
-				4CA676141BB53232005530BF /* libstdc++.tbd in Frameworks */,
 				4CA676121BB53220005530BF /* libz.tbd in Frameworks */,
 				4CA676101BB53212005530BF /* libxml2.tbd in Frameworks */,
 				4CA6760E1BB531FC005530BF /* libicucore.tbd in Frameworks */,
@@ -298,11 +292,9 @@
 				4CC317FD1C8437CB00F4010F /* CoreData.framework */,
 				4CC317FB1C8437B500F4010F /* CoreFoundation.framework */,
 				4CC317F91C84379100F4010F /* libsqlite3.0.tbd */,
-				4CC317F71C84376E00F4010F /* libstdc++.6.0.9.tbd */,
 				4CC317F51C84375900F4010F /* libiconv.tbd */,
 				4CC317F31C84319000F4010F /* libsqlite3.tbd */,
 				4CC317F11C84316500F4010F /* MapKit.framework */,
-				4CA676131BB53232005530BF /* libstdc++.tbd */,
 				4CA676111BB53220005530BF /* libz.tbd */,
 				4CA6760F1BB53212005530BF /* libxml2.tbd */,
 				4CA6760D1BB531FC005530BF /* libicucore.tbd */,
