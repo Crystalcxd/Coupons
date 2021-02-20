@@ -48,7 +48,7 @@ DEPENDENCIES:
   - WeChat_SDK
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
     - ASIHTTPRequest
     - AVOSCloud
@@ -70,6 +70,6 @@ SPEC CHECKSUMS:
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   WeChat_SDK: 681388233ac24a3ed6c4803cb3e0b6d3602050aa
 
-PODFILE CHECKSUM: e4e9f234a6db49a253e4c09b85d71e327d921b66
+PODFILE CHECKSUM: 0350a5428271521472b758146bec8757e4c543cf
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1
