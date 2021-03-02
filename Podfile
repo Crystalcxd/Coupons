@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 
 target 'Coupons' do
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'MBProgressHUD'
 pod 'SDWebImage'
